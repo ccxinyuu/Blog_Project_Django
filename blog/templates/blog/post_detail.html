@@ -3,7 +3,7 @@
 {% block content %}
 
 
-       <h1 class='posttitle loader'>{{ post.title }}</h1>
+       <h1 class="posttitle loader">{{ post.title }}</h1>
 
        {% if post.published_date %}
            <div class="date postdate">
@@ -18,7 +18,7 @@
          </a>
        {% endif %}
 
-     <p class='postcontent' >{{ post.text|safe|linebreaksbr }}</p>
+     <p class="postcontent" >{{ post.text|safe|linebreaksbr }}</p>
 
 
      {% if user.is_authenticated %}
