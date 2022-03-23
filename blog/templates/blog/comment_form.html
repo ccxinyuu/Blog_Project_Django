@@ -1,14 +1,21 @@
 {% extends 'blog/base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
-    <h1>New comment</h1>
+    <h1 class="posttitle loader">
+      New comment
+    </h1>
     <form method="POST">
+      <!-- formatting  -->
       <div class="form-group">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Post Comment</button>
-        <script>var editor = new MediumEditor('.editable');</script>
+        {{ form | crispy}}
       </div>
+
+      <button type="submit" class="save btn btn-default">Post Comment</button>
+      <script>var editor = new MediumEditor('.editable');</script>
+
     </form>
 
 {% endblock %}

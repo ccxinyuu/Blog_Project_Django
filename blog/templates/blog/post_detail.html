@@ -5,6 +5,8 @@
 
        <h1 class="posttitle loader">{{ post.title }}</h1>
 
+       <p class="postcontent" >{{ post.text|safe|linebreaksbr }}</p>
+
        {% if post.published_date %}
            <div class="date postdate">
                {{ post.published_date }}
@@ -18,7 +20,7 @@
          </a>
        {% endif %}
 
-     <p class="postcontent" >{{ post.text|safe|linebreaksbr }}</p>
+
 
 
      {% if user.is_authenticated %}
